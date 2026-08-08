@@ -5,7 +5,7 @@ import { ActivityList, EarningsChart, StatCard } from "../components/dashboard";
 function Overview() {
   return (
     <div className="relative mx-auto max-w-[1600px]">
-      <div className="pointer-events-none absolute -right-20 -top-24 -z-0 size-72 rounded-full bg-indigo-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -top-24 z-0 size-72 rounded-full bg-indigo-500/10 blur-3xl" />
 
       <motion.section
         initial={{ opacity: 0, y: 12 }}
