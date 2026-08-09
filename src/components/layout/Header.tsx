@@ -1,6 +1,10 @@
 import { Bell, Menu, Search } from "lucide-react";
+import { useState } from "react";
+import NotificationDropdown from "./NotificationDropdown";
 
 function Header() {
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-30 flex h-20 items-center justify-between border-b border-black/5 bg-white/80 px-5 backdrop-blur-xl lg:px-8">
       <div className="flex items-center gap-3">
@@ -29,15 +33,25 @@ function Header() {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-3">
-        <button
-          type="button"
-          className="relative rounded-xl p-2.5 text-neutral-600 transition-all duration-200 hover:bg-neutral-100 hover:text-neutral-950"
-          aria-label="Notifications"
-        >
-          <Bell size={19} />
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => setNotificationsOpen((current) => !current)}
+            className="relative rounded-xl p-2.5 text-neutral-600 transition-all duration-200 hover:bg-neutral-100 hover:text-neutral-950"
+            aria-label="Notifications"
+            aria-expanded={notificationsOpen}
+            aria-haspopup="true"
+          >
+            <Bell size={19} />
 
-          <span className="absolute right-2 top-2 size-1.5 rounded-full bg-indigo-500 ring-2 ring-white" />
-        </button>
+            <span className="absolute right-2 top-2 size-1.5 rounded-full bg-indigo-500 ring-2 ring-white" />
+          </button>
+
+          <NotificationDropdown
+            isOpen={notificationsOpen}
+            onClose={() => setNotificationsOpen(false)}
+          />
+        </div>
 
         <div className="ml-1 h-8 w-px bg-black/5" />
 
