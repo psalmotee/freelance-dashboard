@@ -34,9 +34,9 @@ function NotificationDropdown({ isOpen, onClose }: NotificationDropdownProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute right-0 top-14 z-50 w-[min(360px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-black/[0.06] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
+            className="absolute right-0 top-14 z-50 w-[min(360px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
           >
-            <div className="flex items-center justify-between border-b border-black/[0.05] px-5 py-4">
+            <div className="flex items-center justify-between border-b border-black/5 px-5 py-4">
               <div>
                 <h2 className="font-display text-sm font-semibold text-neutral-950">
                   Notifications
@@ -60,7 +60,7 @@ function NotificationDropdown({ isOpen, onClose }: NotificationDropdownProps) {
                   <button
                     key={activity.id}
                     type="button"
-                    className="flex w-full gap-3 border-b border-black/[0.05] px-5 py-4 text-left transition-colors hover:bg-neutral-50"
+                    className="flex w-full gap-3 border-b border-black/5 px-5 py-4 text-left transition-colors hover:bg-neutral-50"
                     onClick={onClose}
                   >
                     <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-neutral-100 text-neutral-600">
