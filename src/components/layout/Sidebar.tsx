@@ -25,7 +25,7 @@ interface SidebarProps {
 
 function Sidebar({ onNavigate }: SidebarProps) {
   return (
-    <aside className="flex h-full w-64 shrink-0 flex-col border-r border-black/5 bg-white">
+    <aside className="fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-black/5 bg-white">
       <div className="flex h-20 items-center border-b border-black/5 px-6">
         <div>
           <span className="font-display text-xl font-bold tracking-tight text-neutral-950">

@@ -47,7 +47,7 @@ function DashboardLayout() {
         )}
       </AnimatePresence>
 
-      <div className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1 lg:ml-64">
         <Header
           mobileMenuOpen={mobileMenuOpen}
           onMenuClick={() => setMobileMenuOpen(true)}

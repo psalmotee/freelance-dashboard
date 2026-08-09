@@ -34,7 +34,7 @@ function NotificationDropdown({ isOpen, onClose }: NotificationDropdownProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute right-0 top-14 z-50 w-[min(360px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
+            className="fixed left-4 right-4 top-20 z-50 overflow-hidden rounded-2xl border border-black/6 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:absolute sm:left-auto sm:right-0 sm:top-14 sm:w-90"
           >
             <div className="flex items-center justify-between border-b border-black/5 px-5 py-4">
               <div>
