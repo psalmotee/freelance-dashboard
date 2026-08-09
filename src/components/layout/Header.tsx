@@ -2,7 +2,12 @@ import { Bell, Menu, Search } from "lucide-react";
 import { useState } from "react";
 import NotificationDropdown from "./NotificationDropdown";
 
-function Header() {
+interface HeaderProps {
+  mobileMenuOpen: boolean;
+  onMenuClick: () => void;
+}
+
+function Header({ mobileMenuOpen, onMenuClick }: HeaderProps) {
   const [notificationsOpen, setNotificationsOpen] = useState(false);
 
   return (
@@ -10,8 +15,10 @@ function Header() {
       <div className="flex items-center gap-3">
         <button
           type="button"
+          onClick={onMenuClick}
           className="rounded-xl p-2.5 text-neutral-600 transition-all duration-200 hover:bg-neutral-100 hover:text-neutral-950 lg:hidden"
-          aria-label="Open navigation"
+          aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={mobileMenuOpen}
         >
           <Menu size={20} />
         </button>
