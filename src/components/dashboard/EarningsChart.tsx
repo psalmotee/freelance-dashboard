@@ -26,7 +26,7 @@ function EarningsChart() {
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: 0.3 }}
-      className="rounded-3xl border border-black/[0.06] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] sm:p-6"
+      className="rounded-3xl border border-black/6 bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] sm:p-6"
     >
       <div className="flex items-start justify-between gap-4">
         <div>
@@ -41,13 +41,13 @@ function EarningsChart() {
 
         <button
           type="button"
-          className="rounded-xl border border-black/[0.06] px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50"
+          className="rounded-xl border border-black/6 px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50"
         >
           This year
         </button>
       </div>
 
-      <div className="mt-8 h-[300px] w-full">
+      <div className="mt-8 h-75 w-full">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={earningsData}

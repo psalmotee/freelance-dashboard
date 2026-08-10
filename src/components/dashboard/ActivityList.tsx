@@ -14,7 +14,7 @@ function ActivityList() {
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: 0.4 }}
-      className="rounded-3xl border border-black/[0.06] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] sm:p-6"
+      className="rounded-3xl border border-black/6 bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] sm:p-6"
     >
       <div className="flex items-center justify-between">
         <div>
@@ -33,7 +33,7 @@ function ActivityList() {
         </button>
       </div>
 
-      <div className="mt-6 divide-y divide-black/[0.05]">
+      <div className="mt-6 divide-y divide-black/5">
         {activities.map((activity) => {
           const Icon = activityIcons[activity.type];
 
