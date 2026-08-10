@@ -26,7 +26,7 @@ function StatCard({
         ease: "easeOut",
       }}
       whileHover={{ y: -4 }}
-      className="group rounded-3xl border border-black/[0.06] bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition-shadow duration-300 hover:shadow-[0_12px_35px_rgba(0,0,0,0.07)]"
+      className="group rounded-3xl border border-black/6 bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition-shadow duration-300 hover:shadow-[0_12px_35px_rgba(0,0,0,0.07)]"
     >
       <div className="flex items-start justify-between gap-4">
         <p className="text-sm font-medium text-neutral-500">{label}</p>

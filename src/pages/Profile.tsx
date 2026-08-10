@@ -4,7 +4,7 @@ import { ProfileForm, SecurityForm } from "../components/profile";
 
 function Profile() {
   return (
-    <div className="relative mx-auto max-w-[1100px]">
+    <div className="relative mx-auto max-w-275">
       <motion.section
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
